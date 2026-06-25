@@ -1,4 +1,5 @@
 import { Routes, Route } from "react-router-dom";
+import { DEMO_MODE } from "./config";
 
 import DashboardPage from "./pages/DashboardPage";
 import ProductsPage from "./pages/ProductsPage";
@@ -15,6 +16,22 @@ import ProtectedRoute from "./components/ProtectedRoute";
 import AdminLayout from "./layouts/AdminLayout";
 
 function App() {
+  if (DEMO_MODE) {
+    return (
+      <div className="min-h-screen flex items-center justify-center bg-slate-100">
+        <div className="text-center">
+          <h1 className="text-3xl font-bold">WAFF L CONE</h1>
+
+          <p className="mt-4 text-gray-600">
+            Demo version is temporarily under update.
+          </p>
+
+          <p className="mt-2">Production version coming soon 🚀</p>
+        </div>
+      </div>
+    );
+  }
+
   return (
     <Routes>
       {/* Public customer pages */}

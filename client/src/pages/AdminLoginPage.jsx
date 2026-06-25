@@ -122,23 +122,6 @@ const AdminLoginPage = () => {
         >
           Login
         </button>
-
-        <div
-          className="
-    mt-6
-    bg-amber-50
-    rounded-xl
-    p-4
-    text-sm
-    text-center
-    "
-        >
-          Demo Login
-          <br />
-          admin@waffnburg.com
-          <br />
-          demo123
-        </div>
       </form>
     </div>
   );
